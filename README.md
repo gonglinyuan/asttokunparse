@@ -11,12 +11,17 @@ This library is compatible with Python 3.8 only.
 Example usages:
 
 ```python
+import ast
+import asttokunparse
+
+
 # Tokenizing unparser
 asttokunparse.unparse(ast.parse("x = x + 1"))
 
 # Expected output:
 # [(1, 'x'), (54, '='), (54, '('), (1, 'x'), (54, '+'),
 #  (2, '1'), (54, ')'), (4, '\n'), (0, '')]
+
 
 # Span unparser
 def func(node):
